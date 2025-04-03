@@ -27,7 +27,6 @@
 - [Interactive Buttons](#interactive-buttons)
 - [Adding Collapsible Sections](#adding-collapsible-sections)
 - [Tables](#tables)
-- [Emojis in Markdown](#emojis-in-markdown)
 - [Limitations of Markdown Features](#limitations-of-markdown-features)
 - [Conclusion](#conclusion)
 
@@ -443,6 +442,39 @@ GitHub does not support clickable buttons, but you can use HTML:
 <a href="https://github.com" style="padding:10px 20px; margin:100px; background:#007bff; color:white; text-decoration:none; border-radius:5px;">Click Me</a>
 
 ---
+## 🗞️ Collapsible Content
+``` md
+<details>
+  <summary>Click to expand</summary>
+  This is hidden content that will appear when clicked.
+</details>
+```
+
+📌 **Output:**  
+<details>
+  <summary>Click to expand</summary>
+  This is hidden content that will appear when clicked.
+</details>
+
+---
+## 📅 Tables
+``` md
+| Name  | Age | Country  |
+|-------|-----|---------|
+| John  | 25  | USA     |
+| Alice | 30  | Canada  |
+| Bob   | 27  | UK      |
+```
+
+📌 **Output:**  
+| Name  | Age | Country  |
+|-------|-----|---------|
+| John  | 25  | USA     |
+| Alice | 30  | Canada  |
+| Bob   | 27  | UK      |
+
+---
+
 
 ## 🔽 Limitations of Markdown Features
 While Markdown is powerful, some features may not work in all platforms:
@@ -454,6 +486,3 @@ While Markdown is powerful, some features may not work in all platforms:
 
 ## 🎯 Conclusion
 Markdown is a powerful yet simple way to write formatted text. With features like checklists, collapsible sections, and tables, you can make your documents interactive and visually appealing!
-
- **Now you are ready to write Markdown like a pro!**
-
