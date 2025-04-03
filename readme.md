@@ -16,6 +16,7 @@
 - [Escaping Characters](#escaping-characters)
 - [Mathematical Symbols](#mathematical-symbols)
 - [Mermaid Diagrams](#mermaid-diagrams)
+- [Indentation](#indentation-adding-spaces-to-text))
 - [Keyboard Shortcuts Formatting](#keyboard-shortcuts-formatting)
 - [Superscript and Subscript](#superscript-and-subscript)
 - [Text Highlighting and Colors](#text-highlighting-and-colors)
@@ -127,6 +128,35 @@ Markdown is a lightweight markup language that makes it easy to format text usin
 
 ---
 
+## 📃 Lists
+> ### Unordered Lists (Bullets)
+```md
+    - Item 1
+    - Item 2
+      - Sub-item 1
+      - Sub-item 2
+```
+📌 **Output:**
+- Item 1
+- Item 2
+  - Sub-item 1
+  - Sub-item 2
+
+> ### Remove Bullet Points (Without List Style)
+```md
+    <ul style="list-style-type: none;">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+```
+📌 **Output:**
+<ul style="list-style-type: none;">
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+---
+
 ## ✅ Checklists-clickable-to-do-lists
 ```md
     - [x] Task 1 (Completed)
@@ -203,6 +233,33 @@ $\sum_{i=1}^{n} i^2$
 ---
 
 ## 📊 Mermaid Diagrams
+```md
+  ```mermaid
+    graph TD;
+      A[Start] -->|Next| B{Decision?};
+
+      %% Decision branches
+      B -- Yes --> C[Proceed];
+      B -- No --> D[Go Back];
+      C --> F[End];
+      D --> B;
+
+      %% Styling for nodes
+      classDef start fill:#FF5733,stroke:#C70039,stroke-width:2px,color:white;
+      classDef decision fill:#FFC300,stroke:#FF5733,stroke-width:2px,color:black;
+      classDef process fill:#3498db,stroke:#2980b9,stroke-width:2px,color:white;
+      classDef finalNode fill:#2ecc71,stroke:#27ae60,stroke-width:2px,color:white;
+
+      %% Assign classes to nodes
+      class A start;
+      class B decision;
+      class C process;
+      class D process;
+      class F finalNode;
+    ```
+``` 
+
+📌 **Output:**  
 ```mermaid
 graph TD;
     A[Start] -->|Next| B{Decision?};
@@ -226,6 +283,74 @@ graph TD;
     class D process;
     class F finalNode;
 ```
+
+---
+
+## 👉 Indentation (Adding Spaces to Text)
+Markdown ignores multiple spaces. To force indentation, use non-breaking spaces (&nbsp; in HTML):
+``` md
+  &nbsp;&nbsp;&nbsp;&nbsp;This is an indented line.
+
+```
+
+📌 **Output:**  
+  &nbsp;&nbsp;&nbsp;&nbsp;This is an indented line.
+
+---
+## ⌨️ Keyboard Shortcuts Formatting
+You can display keyboard shortcuts using HTML <kbd>.
+``` md
+  Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
+
+```
+
+📌 **Output:**  
+  Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
+
+
+---
+## 🔢 Superscript & Subscript
+> ### A. Superscript (Exponent)
+``` md
+  X^2^ + Y^2^ = Z^2
+
+```
+
+📌 **Output:**  
+  X^2^ + Y^2^ = Z^2
+
+
+> ### B. Subscript (Lowered Text)
+``` md
+  H~2~O is water.
+```
+📌 **Output:**  
+  H~2~O is water.
+
+---
+
+## 🔴 Text Highlighting and Colors
+> ### Highlighting Text
+Some Markdown processors support highlighting using HTML:
+``` md
+  This is <mark>highlighted text</mark>.
+
+```
+
+📌 **Output:**  
+  This is <mark>highlighted text</mark>.
+
+> ### Text Coloring (Using HTML)
+Markdown does not support colored text by default, but you can use inline HTML:
+``` md
+  <span style="color: red;">This text is red</span>
+  **<div style="color: red;">This text is red with bold</div>**/
+
+```
+
+📌 **Output:**  
+  <span style="color: red;">This text is red</span>
+  **<div style="color: red;">This text is red with bold</div>**
 
 ---
 
