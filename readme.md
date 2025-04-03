@@ -25,11 +25,9 @@
 - [Spoilers](#spoilers)
 - [Progress Bar](#progress-bar)
 - [Interactive Buttons](#interactive-buttons)
-- [Custom Fonts](#custom-fonts)
 - [Adding Collapsible Sections](#adding-collapsible-sections)
 - [Tables](#tables)
 - [Emojis in Markdown](#emojis-in-markdown)
-- [Collapsible Headings](#collapsible-headings)
 - [Limitations of Markdown Features](#limitations-of-markdown-features)
 - [Conclusion](#conclusion)
 
@@ -351,6 +349,98 @@ Markdown does not support colored text by default, but you can use inline HTML:
 📌 **Output:**  
   <span style="color: red;">This text is red</span>
   **<div style="color: red;">This text is red with bold</div>**
+
+---
+
+## 📄 Text Alignment
+> ### Centering Text
+Markdown does not support text alignment by default, but you can use HTML.
+``` md
+  <p align="center">This text is centered.</p>
+
+
+```
+
+📌 **Output:**  
+  <p align="center">This text is centered.</p>
+
+---
+
+## 📰 Multi-column Layout
+If you want columns (side-by-side content), use HTML tables:
+``` md
+<table>
+  <tr>
+    <td>Column 1</td>
+    <td>Column 2</td>
+  </tr>
+  <tr>
+    <td>Content 1</td>
+    <td>Content 2</td>
+  </tr>
+</table>
+
+```
+
+📌 **Output:**  
+<table>
+  <tr>
+    <td>Column 1</td>
+    <td>Column 2</td>
+  </tr>
+  <tr>
+    <td>Content 1</td>
+    <td>Content 2</td>
+  </tr>
+</table>
+
+
+---
+## ☁️ Spoilers
+``` md
+<details>
+  <summary>Click for Spoiler</summary>
+  Darth Vader is Luke's father.
+</details>
+```
+
+📌 **Output:**  
+<details>
+  <summary>Click for Spoiler</summary>
+  Darth Vader is Luke's father.
+</details>
+
+---
+
+## 📈 Progress Bar
+Markdown doesn’t support progress bars natively, but you can fake one using Unicode characters or HTML:
+
+> ### Fake
+``` md
+🔵🔵🔵⚪⚪ 60% Complete
+
+```
+
+📌 **Output:**  
+🔵🔵🔵⚪⚪ 60% Complete
+
+> ### Using HTML
+``` md
+<progress value="60" max="100"></progress>
+```
+
+📌 **Output:**  
+<progress value="60" max="100"></progress>
+---
+## 🔘 Interactive Buttons
+GitHub does not support clickable buttons, but you can use HTML:
+``` md
+<a href="https://github.com" style="padding:10px 20px; margin:100px; background:#007bff; color:white; text-decoration:none; border-radius:5px;">Click Me</a>
+
+```
+
+📌 **Output:**  
+<a href="https://github.com" style="padding:10px 20px; margin:100px; background:#007bff; color:white; text-decoration:none; border-radius:5px;">Click Me</a>
 
 ---
 
